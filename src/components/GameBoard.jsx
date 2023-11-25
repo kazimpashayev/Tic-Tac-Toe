@@ -4,7 +4,9 @@ import Square from './Square';
 import WinningLine from './WinningLine';
 
 function GameBoard() {
-  const { squares, handleSquareClick } = useContext(TictactoeContext);
+  const { squares, handleSquareClick, winningLineClass } =
+    useContext(TictactoeContext);
+
   return (
     <div className="game-board">
       <Square
@@ -48,7 +50,7 @@ function GameBoard() {
         className="right-border"
       />
       <Square onClick={() => handleSquareClick(8)} value={squares[8]} />
-      <WinningLine />
+      <WinningLine winningLineClass={winningLineClass} />
     </div>
   );
 }
