@@ -1,13 +1,10 @@
 import { createContext, useState, useEffect } from 'react';
 import GameStatus from '../components/gameStatus';
 import { winningRules } from '../components/winningRules';
-
 const TictactoeContext = createContext();
 
 const Player_X = 'X';
 const Player_O = 'O';
-
-//! Commit Olunmalidir!
 
 function Provider({ children }) {
   const [squares, setSquares] = useState(Array(9).fill(null));
@@ -20,15 +17,12 @@ function Provider({ children }) {
   }, [squares]);
 
   const handleSquareClick = (index) => {
-    // console.log(index);
     if (squares[index] !== null) {
       return;
     }
     const newSquares = [...squares];
     newSquares[index] = currentPlayer;
     setSquares(newSquares);
-
-    // console.log(newSquares);
 
     if (currentPlayer === Player_X) {
       setCurrentPlayer(Player_O);
