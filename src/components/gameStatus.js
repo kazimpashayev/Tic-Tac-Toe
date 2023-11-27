@@ -1,4 +1,3 @@
-//! Commit Olunmalidir!
 const GameStatus = {
   playerXWins: 0,
   playerOWins: 1,
