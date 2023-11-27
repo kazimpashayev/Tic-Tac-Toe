@@ -3,7 +3,7 @@ import GameStatus from './gameStatus';
 
 function GameOver() {
   const { gameStatus } = useGameContext();
-  //   console.log(gameStatus);
+
   switch (gameStatus) {
     case GameStatus.inProgress:
       return <></>;

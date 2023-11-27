@@ -1,6 +1,7 @@
 import { createContext, useState, useEffect } from 'react';
 import GameStatus from '../components/gameStatus';
 import { winningRules } from '../components/winningRules';
+
 const TictactoeContext = createContext();
 
 const Player_X = 'X';

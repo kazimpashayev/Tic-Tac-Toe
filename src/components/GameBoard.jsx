@@ -1,11 +1,9 @@
-import { useContext } from 'react';
-import TictactoeContext from '../context/tictactoe';
+import useGameContext from '../hooks/use-game-context';
 import Square from './Square';
 import WinningLine from './WinningLine';
 
 function GameBoard() {
-  const { squares, handleSquareClick, winningLineClass } =
-    useContext(TictactoeContext);
+  const { squares, handleSquareClick, winningLineClass } = useGameContext();
 
   return (
     <div className="game-board">
