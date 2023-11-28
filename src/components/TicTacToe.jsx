@@ -1,5 +1,6 @@
 import GameBoard from './GameBoard';
 import GameOver from './GameOver';
+import Reset from './Reset';
 
 function TicTacToe() {
   return (
@@ -7,6 +8,7 @@ function TicTacToe() {
       <h1>Tic Tac Toe</h1>
       <GameBoard />
       <GameOver />
+      <Reset />
     </div>
   );
 }
