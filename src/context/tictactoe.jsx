@@ -18,6 +18,9 @@ function Provider({ children }) {
   }, [squares]);
 
   const handleSquareClick = (index) => {
+    if (gameStatus !== GameStatus.inProgress) {
+      return;
+    }
     if (squares[index] !== null) {
       return;
     }
@@ -33,8 +36,7 @@ function Provider({ children }) {
   };
 
   const checkWinner = (squares, setWinningLineClass, setGameStatus) => {
-    winningRules.forEach(({ rule, winningLineClass }) => {
-      // console.log(squares[rule[0]]);
+    for (const { rule, winningLineClass } of winningRules) {
       const squareValue1 = squares[rule[0]];
       const squareValue2 = squares[rule[1]];
       const squareValue3 = squares[rule[2]];
@@ -50,13 +52,32 @@ function Provider({ children }) {
         } else {
           setGameStatus(GameStatus.playerOWins);
         }
+        return;
       }
-    });
+    }
+
+    const squaresFilled = squares.every((square) => square !== null);
+    if (squaresFilled) {
+      setGameStatus(GameStatus.draw);
+    }
+  };
+
+  const handleReset = () => {
+    setGameStatus(GameStatus.inProgress);
+    setSquares(Array(9).fill(null));
+    setCurrentPlayer(Player_X);
+    setWinningLineClass('');
   };
 
   return (
     <TictactoeContext.Provider
-      value={{ squares, handleSquareClick, winningLineClass, gameStatus }}
+      value={{
+        squares,
+        handleSquareClick,
+        winningLineClass,
+        gameStatus,
+        handleReset,
+      }}
     >
       {children}
     </TictactoeContext.Provider>
