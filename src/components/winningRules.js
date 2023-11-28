@@ -7,7 +7,7 @@ export const winningRules = [
   // Columns
   { rule: [0, 3, 6], winningLineClass: 'winning-line-col-1' },
   { rule: [1, 4, 7], winningLineClass: 'winning-line-col-2' },
-  { rule: [2, 5, 8], winningLineClass: 'winning-line-col-4' },
+  { rule: [2, 5, 8], winningLineClass: 'winning-line-col-3' },
 
   // Diagonals
   { rule: [0, 4, 8], winningLineClass: 'winning-line-diagonal-1' },
