@@ -1,8 +1,24 @@
-# React + Vite
+# Tic Tac Toe
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple implementation of the classic Tic Tac Toe game using React, Context API, and CSS.
 
-Currently, two official plugins are available:
+## Introduction
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Welcome to the React Tic Tac Toe project! This project provides a user-friendly implementation of the classic Tic Tac Toe game using React for the UI, Context API for state management, and CSS for styling.
+
+## Features
+
+- Two-player mode
+- Dynamic board updates using React state
+- Game state management with Context API
+
+## Live Preview
+
+Try out the game live on [Live Demo on Vercel](tic-tac-toe-eta-kohl.vercel.app)
+
+### Prerequisites
+
+Before you begin, ensure you have the following:
+
+- Node.js installed on your machine
+- A package manager such as npm or yarn
